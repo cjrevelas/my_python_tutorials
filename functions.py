@@ -13,7 +13,7 @@ def function_name(function_arguments: type_of_function_arguments) -> return_type
 
     return (...)
 """
-from typing import List
+from typing import List, Dict
 
 
 '''
@@ -86,6 +86,31 @@ def ListOfSquares(inputList: List[int]) -> List[int]:
 Define a function with name ListOfEvenNumbers, which will receive a list of integers,
 and returns a new list containing only the even of those integers.
 '''
+def ListOfEvenNumbers(inputList: List[int]) -> List[int]:
+    newList = list()
+
+    for number in inputList:
+        if number % 2 == 0:
+            newList.append(number)
+
+    return newList
+
+
+'''
+Write a function which receives an input list and an input dictionary from main() and
+checkes whether an element of the list exists as a key's value in the dictionary. If
+the element does exist, it must be stored in a new list, which in turn must be returned
+to main() for printing.
+'''
+def CheckDict(inputList: List[int], inputDict: Dict) -> List[int]:
+    newList = list()
+
+    for number in inputList:
+        if number in inputDict.values():
+            newList.append(number)
+
+    return newList
+
 
 '''
 main() function
@@ -113,6 +138,14 @@ def main(): # Definition of function "main()", which is the central function of 
     print("\n")
 
     print(ListOfSquares(range(1,11)))
+    print("\n")
+
+    print(ListOfEvenNumbers(range(1,11)))
+    print("\n")
+
+    myList = [47, 64, 69, 37, 76, 83, 95, 97]
+    myDict = {"John": 47, "Emma": 69, "Kelly": 76, "Jason": 97}
+    print(CheckDict(myList, myDict))
 
     return
 
