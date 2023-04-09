@@ -22,8 +22,14 @@ class IntegerList:
 
         return multipliedList
 
-    def findEvenNumbers(self):
-        pass
+    def findEvenNumbers(self) -> List[int]:
+        evenList = list()
+
+        for ii in self.list:
+            if (ii % 2 == 0):
+                evenList.append(ii)
+
+        return evenList
 
 
 def main():
@@ -35,8 +41,8 @@ def main():
     print(myList.multiplyBy(3))
     print('\n')
 
-    #print(myList.findEvenNumber())
-    #print('\n')
+    print(myList.findEvenNumbers())
+    print('\n')
 
 
 main()
