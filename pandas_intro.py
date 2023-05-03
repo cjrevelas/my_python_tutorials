@@ -51,8 +51,32 @@ Here, we create a dataframe importing data from csv file.
 frameObject3 = pd.read_csv("files/nba.csv")
 print(frameObject3)
 print('\n')
+
+# We can use the following commands to see the first and last rows of the frame, respectively.
+print(frameObject3.head())
+print('\n')
+print(frameObject3.tail())
+print('\n')
+
+number_of_rows = frameObject3.shape[0]
+number_of_cols = frameObject3.shape[1]
+
+# We can extract specific rows and columns from our data frame.
+column1 = frameObject3.iloc[:,0]
+column2 = frameObject3.loc[:,'Salary']
+rows    = frameObject3.iloc[range(440,451), range(0,number_of_cols)]
+
+print(column1)
+print('\n')
+print(column2)
+print('\n')
+print(rows)
+print('\n')
+
+# Pandas dataframe objects support the 'plot' method of matplotlib.
 frameObject3.plot(x = 'Name', y = 'Salary', color = 'purple', marker = '.', linestyle = 'dotted')
 plt.show()
+
 '''
 Another example.
 '''
@@ -62,3 +86,23 @@ myList = [ [2, 'Catherine', 22], [1, 'Constantinos', 25], [3, 'Panos', 24] ]
 frameObject4 = pd.DataFrame(myList, columns = ['id', 'name', 'age'])
 print(frameObject4)
 print('\n')
+
+'''
+We can create a new dataframe using an existing dataframe which can be modified in various ways.
+'''
+frameObject5 = frameObject4.set_index('id')
+print(frameObject5)
+print('\n')
+
+# We can also sort the rows of our dataframe with various ways.
+print(frameObject5.sort_index())
+print('\n')
+print(frameObject5.sort_values(by = ['age']))
+print('\n')
+print(frameObject5.sort_values(by = ['name']))
+
+# We can also export our dataframe to a csv or xlsx file.
+frameObject5.to_csv('dataframe.csv')
+frameObject5.to_excel('dataframe.xlsx')
+
+exit()
