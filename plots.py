@@ -32,3 +32,29 @@ myFigure3, axes = plt.subplots(2)
 axes[0].plot(x_axis, y_axis3, color = 'red')
 axes[1].plot(x_axis, y_axis4, color = 'orange')
 plt.show()
+
+# Some more options on formatting the plot area
+plotTitleFormat = {'fontname': 'Times New Roman', 'fontsize': '24'}
+axisLabelFormat = {'fontname': 'Helvetica', 'fontsize': '18'}
+
+x  = range(0,8,1)
+y1 = range(0,24,3)
+y2 = np.power(x,3)
+
+plt.title("y = f(x)", fontdict = plotTitleFormat)
+plt.xlabel("X axis",  fontdict = axisLabelFormat)
+plt.ylabel("Y axis",  fontdict = axisLabelFormat)
+
+plt.plot(x, y1, color = 'purple', label = 'y = 3x',  marker = '.', linewidth = 1.5, markersize = 10, linestyle = '--')
+plt.plot(x, y2, color = 'red',    label = 'y = x^3', marker = '.', linewidth = 1.5, markersize = 10, linestyle = 'None')
+
+plt.xticks(range(0,8,2))
+plt.yticks(range(0,400,100))
+
+plt.tick_params(axis = 'x', direction = 'in', length = 5.0, width = 2.0)
+plt.tick_params(axis = 'y', direction = 'in', length = 5.0, width = 2.0)
+
+plt.legend()
+plt.show()
+
+exit()
