@@ -1,51 +1,49 @@
-# we want to define two classes named Dog and Cat.
-# Each of those classes will have the following attributes:
-    # name: str
-    # legs: int
-# and the following methods:
-    # __init__(self, ...)   [will initialize the name and legs of self]
-    # speak(self,...)       [Dog objects will print "Woof Woof", Cat objects will print "Meow"]
-    # identify(self,...)    [will print name of animal and number of legs]
+class Animal:
+    def __init__(self, name: str, legs: int):
+        self.name_ = name
+        self.legs_ = legs
 
-# create a Dog object myDog with name "sandy" and legs = 4
-# create a Cat object myCat with name "mitsos" and legs = 4
+    def Speak(self):
+        print("Just a random animal speaking")
 
-class Dog:
-    def __init__(self, inputName: str, inputLegs: int):
-        self.name = inputName
-        self.legs = inputLegs
+    def Identify(self):
+        print("Just a random animal identifying")
 
-    def speak(self):
-        print("Woof woof!")
+
+class Dog(Animal):
+    def __init__(self, name: str, legs: int):
+        super().__init__(name, legs)
+
+    def Speak(self):
+        print("Woof woof")
         return
 
-    def identify(self):
+    def Identify(self):
         print("I am a dog!")
-        print("My name is " + self.name)
-        print("I have " + str(self.legs) + " legs\n")
+        print("My name is " + self.name_)
+        print("I have " + str(self.legs_) + " legs\n")
         return
 
 
-class Cat:
-    def __init__(self, inputName: str, inputLegs: int):
-        self.name = inputName
-        self.legs = inputLegs
+class Cat(Animal):
+    def __init__(self, name: str, legs: int):
+        super().__init__(name, legs)
 
-    def speak(self):
+    def Speak(self):
         print("Meow!")
         return
 
-    def identify(self):
+    def Identify(self):
         print("I am a cat!")
-        print("My name is " + self.name)
-        print("I have " + str(self.legs) + " legs\n")
+        print("My name is " + self.name_)
+        print("I have " + str(self.legs_) + " legs\n")
         return
 
 
 myDog = Dog("sandy", 4)
-myDog.speak()
-myDog.identify()
+myDog.Speak()
+myDog.Identify()
 
 myCat = Cat("mitsos", 4)
-myCat.speak()
-myCat.identify()
+myCat.Speak()
+myCat.Identify()
