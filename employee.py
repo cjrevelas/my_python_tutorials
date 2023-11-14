@@ -4,15 +4,15 @@ class Employee:
         self.age    = inputAge
         self.salary = inputSalary
 
-    def work(self) -> None:
+    def Work(self) -> None:
         print(self.name + " is now working..\n")
         return
 
-    def timeOut(self) -> None:
+    def TimeOut(self) -> None:
         print(self.name + " is now on a break..\n")
         return
 
-    def printInfo(self) -> None:
+    def PrintInfo(self) -> None:
         print(self.name + " is " + str(self.age) + " years old and gets " + str(self.salary) + " per month :)\n")
         return
 
@@ -23,14 +23,14 @@ def main():
 
     print("\n")
 
-    katerina.printInfo()
-    constantinos.printInfo()
+    katerina.PrintInfo()
+    constantinos.PrintInfo()
 
-    katerina.work()
-    constantinos.timeOut()
+    katerina.Work()
+    constantinos.TimeOut()
 
-    constantinos.work()
-    katerina.timeOut()
+    constantinos.Work()
+    katerina.TimeOut()
 
 
 main()

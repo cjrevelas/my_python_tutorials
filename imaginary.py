@@ -30,10 +30,10 @@ class Complex:
         self.realPart = inputNumber1
         self.imagPart = inputNumber2
 
-    def printNumber(self, string: str):
+    def PrintNumber(self, string: str):
         print("the number is " + str(self.realPart) + " + " + str(self.imagPart) + string)
 
-    def sumParts(self) -> float:
+    def SumParts(self) -> float:
         return self.realPart + self.imagPart
 
 x = Complex(2.0, 3.0) # calls __init__ of Complex with self = x
@@ -47,13 +47,13 @@ print("Real part of x: "      + str(y.realPart))
 print("Imaginary part of x: " + str(y.imagPart))
 print("\n")
 
-x.printNumber(" yolo x object\n")
-y.printNumber(" yolo y object\n")
+x.PrintNumber(" yolo x object\n")
+y.PrintNumber(" yolo y object\n")
 
-theSumOfPartsOfX = x.sumParts()
+theSumOfPartsOfX = x.SumParts()
 print(theSumOfPartsOfX)
 print("\n")
 
-theSumOfPartsOfY = y.sumParts()
+theSumOfPartsOfY = y.SumParts()
 print(theSumOfPartsOfY)
 print("\n")

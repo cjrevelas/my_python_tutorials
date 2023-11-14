@@ -5,7 +5,7 @@ class IntegerList:
         self.list = inputList
         print(self.list)
 
-    def findProduct(self) -> int:
+    def FindProduct(self) -> int:
         product = 1
 
         for ii in self.list:
@@ -14,7 +14,7 @@ class IntegerList:
 
         return product
 
-    def multiplyBy(self, multiplier: int) -> List[int]:
+    def MultiplyBy(self, multiplier: int) -> List[int]:
         multipliedList = list()
 
         for ii in self.list:
@@ -22,7 +22,7 @@ class IntegerList:
 
         return multipliedList
 
-    def findEvenNumbers(self) -> List[int]:
+    def FindEvenNumberss(self) -> List[int]:
         evenList = list()
 
         for ii in self.list:
@@ -35,13 +35,13 @@ class IntegerList:
 def main():
     myList = IntegerList([1, 2, 15, 1, 22])
 
-    print(myList.findProduct())
+    print(myList.FindProduct())
     print('\n')
 
-    print(myList.multiplyBy(3))
+    print(myList.MultiplyBy(3))
     print('\n')
 
-    print(myList.findEvenNumbers())
+    print(myList.FindEvenNumberss())
     print('\n')
 
 
