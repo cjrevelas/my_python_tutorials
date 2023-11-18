@@ -39,11 +39,14 @@ class Cat(Animal):
         print("I have " + str(self.legs_) + " legs\n")
         return
 
+def main() -> None:
+    myDog = Dog("sandy", 4)
+    myDog.Speak()
+    myDog.Identify()
 
-myDog = Dog("sandy", 4)
-myDog.Speak()
-myDog.Identify()
+    myCat = Cat("mitsos", 4)
+    myCat.Speak()
+    myCat.Identify()
 
-myCat = Cat("mitsos", 4)
-myCat.Speak()
-myCat.Identify()
+if __name__ == "__main__":
+    main()

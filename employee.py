@@ -17,7 +17,7 @@ class Employee:
         return
 
 
-def main():
+def main() -> None:
     constantinos = Employee("constantinos", 42, 1500.10)
     katerina     = Employee("katerina", 32, 2400.50)
 
@@ -32,5 +32,5 @@ def main():
     constantinos.Work()
     katerina.TimeOut()
 
-
-main()
+if __name__ == "__main__":
+    main()

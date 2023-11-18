@@ -32,17 +32,12 @@ class IntegerList:
         return evenList
 
 
-def main():
+def main() -> None:
     myList = IntegerList([1, 2, 15, 1, 22])
 
     print(myList.FindProduct())
-    print('\n')
-
     print(myList.MultiplyBy(3))
-    print('\n')
-
     print(myList.FindEvenNumberss())
-    print('\n')
 
-
-main()
+if __name__ == "__main__":
+    main()

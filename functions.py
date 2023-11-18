@@ -1,11 +1,11 @@
 """
 HERE, WE DEMONSTRATE HOW TO DEFINE AND USE A FUNCTION IN PYTHON
-"""
 
-"""
 We define a function by defining its signature and its body.
 function signature: name + arguments/parameters + return type
 function body: all statements that are executed inside the function
+
+Function declaration and definition syntax:
 
 def function_name(function_arguments: type_of_function_arguments) -> return_type:
     ..blah..
@@ -15,14 +15,12 @@ def function_name(function_arguments: type_of_function_arguments) -> return_type
 """
 from typing import List, Dict
 
-
 '''
 Define a function that simply prints a string.
 '''
 def MyPrint(myString: str) -> None: # Definition of function "myPrint()"
   print(myString)
   return
-
 
 '''
 Define a function that returns the sum of two integers.
@@ -31,10 +29,9 @@ def MySum(x: int, y: int) -> int:
     return (x+y) # it becomes clear here, that the return statement is also a part of the function body
                  # in fact, functions performing trivial operations (like this one) can comprise just one return statement
 
-
 '''
 Define a function that receives an integer and returns the sum of all positive
-integers smaller than that integer.
+integers smaller than that integer.
 '''
 def SumOfNumbers(y: int) -> int:
     summ = 0
@@ -43,7 +40,6 @@ def SumOfNumbers(y: int) -> int:
         summ += ii
 
     return summ
-
 
 '''
 Define a function with name SumOfList, which will receive a list of floats
@@ -57,7 +53,6 @@ def SumOfList(inputList: List[float]) -> float:
 
     return summ
 
-
 '''
 Define a funciton with name EvenProduct, which will receive two integers and
 check whether their product is an even number.
@@ -67,7 +62,6 @@ def EvenProduct(x: int, y: int) -> bool:
     isEven  = (product % 2 == 0)
 
     return isEven
-
 
 '''
 Define a function with name ListOfSquares, which will receive a list of integers,
@@ -80,7 +74,6 @@ def ListOfSquares(inputList: List[int]) -> List[int]:
         newList.append(number**2)
 
     return newList
-
 
 '''
 Define a function with name ListOfEvenNumbers, which will receive a list of integers,
@@ -95,10 +88,9 @@ def ListOfEvenNumbers(inputList: List[int]) -> List[int]:
 
     return newList
 
-
 '''
 Write a function which receives an input list and an input dictionary from main() and
-checkes whether an element of the list exists as a key's value in the dictionary. If
+checks whether an element of the list exists as a (key's) value in the dictionary. If
 the element does exist, it must be stored in a new list, which in turn must be returned
 to main() for printing.
 '''
@@ -111,37 +103,29 @@ def CheckDict(inputList: List[int], inputDict: Dict) -> List[int]:
 
     return newList
 
-
 '''
 main() function
 '''
-def main(): # Definition of function "main()", which is the central function of a python script
+def main() -> None: # Definition of function "main()", which is the central function of a python script
     myString = "This is my first function in Python!"
     MyPrint(myString)
-    print("\n")
 
     x = 2
     y = 5
     z = MySum(x,y)
     print(z)
-    print("\n")
 
     x = SumOfNumbers(10)
     print(x)
-    print("\n")
 
     print(EvenProduct(3,7))
-    print("\n")
 
     y = SumOfList([2.0, 3.4, 2.98, 8.7, 6.5, 9.2])
     print(y)
-    print("\n")
 
     print(ListOfSquares(range(1,11)))
-    print("\n")
 
     print(ListOfEvenNumbers(range(1,11)))
-    print("\n")
 
     myList = [47, 64, 69, 37, 76, 83, 95, 97]
     myDict = {"John": 47, "Emma": 69, "Kelly": 76, "Jason": 97}
@@ -149,5 +133,5 @@ def main(): # Definition of function "main()", which is the central function of 
 
     return
 
-
-main() # At this point we call function "main()" and execution of the script starts.
+if __name__ == "__main__":
+    main() # At this point we call function "main()" and execution of the script starts.
