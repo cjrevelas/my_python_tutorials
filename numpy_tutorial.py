@@ -197,5 +197,40 @@ def main() -> None:
     print(c)
     print()
 
+    # Merging and splitting arrays
+    print("Merging and splitting arrays")
+    a1 = [[1,2,3,4,5,6],
+          [7,8,9,10,11,12]]
+    print(a1)
+    print()
+
+    a2 = [[11,12,13,14,15,16],
+          [17,18,19,20,21,22]]
+    print(a2)
+    print()
+
+    a3 = np.concatenate((a1, a2), axis=0)
+    print(a3)
+    print()
+
+    a4 = np.concatenate((a1, a2), axis=1)
+    print(a4)
+    print()
+
+    a5 = np.vstack((a1,a2))
+    print(a5)
+    print()
+
+    a6 = np.hstack((a1,a2))
+    print(a6)
+    print()
+
+    a7 = np.stack((a1,a2))
+    print(a7)
+    print()
+
+    print(a7.shape)
+    print()
+
 if __name__ == "__main__":
     main()
