@@ -85,8 +85,13 @@ def main() -> None:
     print(b4)
     print()
 
-    c = np.append(b2, [11, 12, 13, 14, 15, 16], axis = 0)
+    c = np.append(b3, [[11, 12, 13, 14, 15, 16]], axis = 0)
     print(c)
+    print()
+
+    c = np.append(b4, [[11], [12], [13], [14], [15], [16]], axis = 1)
+    print(c)
+    print()
 
     a = np.array([[4,7], [2,8], [5, 6]])
     print(a)
