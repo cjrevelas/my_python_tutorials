@@ -19,19 +19,7 @@ def main() -> None:
     print(a)
     print()
 
-    a = np.array([ [1,2,3], [4,5,6] ])
-    print(a)
-    print()
 
-    print(a[:,0])
-    print(a[:,1])
-    print(a[:,2])
-    print()
-
-    print(a[0,:])
-    print(a[1,:])
-    print()
-    
     # Comparing a numpy array to a python list
     print("Comparing a numpy array to a python list")
     b = range(1000)
@@ -72,6 +60,34 @@ def main() -> None:
 
     # Let's work with our first 2d array
     print("Working with multidimensional arrays")
+
+    a = np.array([ [1,2,3], [4,5,6] ])
+    print(a)
+    print()
+
+    print(a[:,0])
+    print(a[:,1])
+    print(a[:,2])
+    print()
+
+    print(a[0,:])
+    print(a[1,:])
+    print()
+
+    print("Flattening a multi-dimensional array")
+    b1 = a.flatten()
+    print(b1)
+    b2 = a.reshape((6,))
+    print(b2)
+    b3 = a.reshape((1,6))
+    print(b3)
+    b4 = a.reshape((6,1))
+    print(b4)
+    print()
+
+    c = np.append(b2, [11, 12, 13, 14, 15, 16], axis = 0)
+    print(c)
+
     a = np.array([[4,7], [2,8], [5, 6]])
     print(a)
     print(a.ndim) # number of axes/dimensions
