@@ -14,11 +14,26 @@ def main() -> None:
     print("Hello")
 
     # Basic numpy array initialization syntax
+    print("Basic numpy initilization syntax")
     a = np.array([1,2,3])
     print(a)
     print()
 
+    a = np.array([ [1,2,3], [4,5,6] ])
+    print(a)
+    print()
+
+    print(a[:,0])
+    print(a[:,1])
+    print(a[:,2])
+    print()
+
+    print(a[0,:])
+    print(a[1,:])
+    print()
+    
     # Comparing a numpy array to a python list
+    print("Comparing a numpy array to a python list")
     b = range(1000)
     print(sys.getsizeof(5) * len(b))
     print()
@@ -56,6 +71,7 @@ def main() -> None:
     print()
 
     # Let's work with our first 2d array
+    print("Working with multidimensional arrays")
     a = np.array([[4,7], [2,8], [5, 6]])
     print(a)
     print(a.ndim) # number of axes/dimensions
@@ -78,6 +94,7 @@ def main() -> None:
     print()
 
     # Initialization of a numpy array of a certain shape
+    print("Initializaing numpy arrays with a certain shape")
     a = np.zeros((3,4))
     print(a)
     print()
@@ -95,6 +112,7 @@ def main() -> None:
     print()
 
     # Reshaping an array
+    print("Reshaping arrays")
     a = np.arange(9)
     print(a)
 
@@ -130,6 +148,32 @@ def main() -> None:
     print()
 
     print(np.swapaxes(x,0,2))
+    print()
+
+    # Arithmetic operations on numpy arrays
+    print("Performing arithmetic operations on numpy arrays")
+    a = np.arange(9).reshape(3,3)
+    print(a)
+    print()
+
+    b = a + 10
+    print(b)
+    print()
+
+    b = a * 10
+    print(b)
+    print()
+
+    c = np.add(a,np.array([10,10,10]))
+    print(c)
+    print()
+
+    c = a + np.array([10,10,10])
+    print(c)
+    print()
+
+    c = a + np.array([10,100,1000])
+    print(c)
     print()
 
 if __name__ == "__main__":
