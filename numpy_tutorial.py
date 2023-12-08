@@ -11,17 +11,40 @@ In the context of Numpy, we refer to array dimensions as "axes".
 '''
 
 def main() -> None:
-    print("Hello")
-
     # Basic numpy array initialization syntax
-    print("Basic numpy initilization syntax")
+    print("----- Basic numpy initilization syntax -----")
     a = np.array([1,2,3])
     print(a)
     print()
 
+    # Characteristics of a numpy array
+    print("----- Characteristics of a numpy array -----")
+    x1 = np.array([1,2,3,4,5])
+    print(x1, '\n')
+    print("Number of dimensions/axes: ", x1.ndim, '\n')
+    print("Shape (number of elements along each axis): ", x1.shape, '\nA')
+    print("Type of elements: ", x1.dtype,'\n')
+
+    y1 = np.arange(1,6,1, dtype = np.double)
+    print(y1, '\n')
+    print("Number of dimensions/axes: ", y1.ndim, '\n')
+    print("Shape (number of elements along each axis): ", y1.shape, '\n')
+    print("Type of elements: ", y1.dtype, '\n')
+
+    x2 = np.array([[1,2,3,4,5],[6,7,8,9,10]])
+    print(x2, '\n')
+    print("Number of dimensions/axes: ", x2.ndim, '\n')
+    print("Shape (number of elements along each axis): ", x2.shape, '\n')
+    print("Type of elements: ", x2.dtype, '\n')
+
+    y2 = np.arange(1,11,1).reshape((2,5))
+    print(y2, '\n')
+    print("Number of dimensions/axes: ", y2.ndim, '\n')
+    print("Shape (number of elements along each dimension/axis): ", y2.shape, '\n')
+    print("Type of elements: ", y2.dtype, '\n')
 
     # Comparing a numpy array to a python list
-    print("Comparing a numpy array to a python list")
+    print("----- Comparing a numpy array to a python list -----")
     b = range(1000)
     print(sys.getsizeof(5) * len(b))
     print()
@@ -59,7 +82,7 @@ def main() -> None:
     print()
 
     # Let's work with our first 2d array
-    print("Working with multidimensional arrays")
+    print("----- Working with multidimensional arrays -----")
 
     a = np.array([ [1,2,3], [4,5,6] ])
     print(a)
@@ -74,7 +97,7 @@ def main() -> None:
     print(a[1,:])
     print()
 
-    print("Flattening a multi-dimensional array")
+    print("----- Flattening a multi-dimensional array -----")
     b1 = a.flatten()
     print(b1)
     b2 = a.reshape((6,))
@@ -115,7 +138,7 @@ def main() -> None:
     print()
 
     # Initialization of a numpy array of a certain shape
-    print("Initializaing numpy arrays with a certain shape")
+    print("----- Initializaing numpy arrays with a certain shape -----")
     a = np.zeros((3,4))
     print(a)
     print()
@@ -133,7 +156,7 @@ def main() -> None:
     print()
 
     # Reshaping an array
-    print("Reshaping arrays")
+    print("----- Reshaping arrays -----")
     a = np.arange(9)
     print(a)
 
@@ -172,7 +195,7 @@ def main() -> None:
     print()
 
     # Arithmetic operations on numpy arrays
-    print("Performing arithmetic operations on numpy arrays")
+    print("----- Performing arithmetic operations on numpy arrays -----")
     a = np.arange(9).reshape(3,3)
     print(a)
     print()
@@ -198,7 +221,7 @@ def main() -> None:
     print()
 
     # Merging and splitting arrays
-    print("Merging and splitting arrays")
+    print("----- Merging and splitting arrays -----")
     a1 = [[1,2,3,4,5,6],
           [7,8,9,10,11,12]]
     print(a1)
